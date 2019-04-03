@@ -12,7 +12,7 @@ class Player(object):
             "\nHi player %s. Input x,y to make a move, where 0 <= x,y <= %s: " % (self.val, str(board_size-1))
         )
         i, j = map(int, input_raw.split(","))
-        if not 0 <= i < game.board_size or not 0 <= j < game.board_size:
+        if not 0 <= i < board_size or not 0 <= j < board_size:
             raise ValueError()
         else:
             return i, j
